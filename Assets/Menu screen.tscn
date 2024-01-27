@@ -1,0 +1,126 @@
+[gd_scene load_steps=8 format=3 uid="uid://28g2787irwih"]
+
+[ext_resource type="Script" path="res://Scripts/ButtonExitGame.gd" id="1"]
+[ext_resource type="Script" path="res://Scripts/ButtonPlay.gd" id="2"]
+[ext_resource type="FontFile" uid="uid://cx0jys0omopia" path="res://Fonts/Computer Speak v0.3.ttf" id="3"]
+
+[sub_resource type="FontFile" id="1"]
+fallbacks = Array[Font]([ExtResource("3")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[sub_resource type="FontFile" id="2"]
+fallbacks = Array[Font]([ExtResource("3")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[sub_resource type="FontFile" id="3"]
+fallbacks = Array[Font]([ExtResource("3")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[sub_resource type="FontFile" id="4"]
+fallbacks = Array[Font]([ExtResource("3")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_top = 1.52588e-05
+offset_right = 1024.0
+offset_bottom = 600.0
+color = Color(0.0745098, 0.137255, 0.360784, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+anchor_left = -0.00309896
+anchor_top = 0.137512
+anchor_right = 0.959792
+anchor_bottom = 0.419178
+offset_right = 40.0
+offset_bottom = 14.0
+rotation = -5.6
+theme_override_colors/font_color = Color(0.894118, 0.741176, 0.137255, 1)
+theme_override_colors/font_shadow_color = Color(0.768627, 0.298039, 0.25098, 1)
+theme_override_colors/font_outline_color = Color(0.415686, 0.603922, 0.109804, 1)
+theme_override_fonts/font = SubResource("1")
+text = "Ze Kugel"
+
+[node name="ButtonPlay" type="Button" parent="."]
+layout_mode = 0
+anchor_top = 0.00194397
+anchor_bottom = 0.00194397
+offset_left = 411.998
+offset_top = 273.877
+offset_right = 602.998
+offset_bottom = 357.877
+rotation = 11.3
+theme_override_colors/font_color = Color(0.894118, 0.741176, 0.137255, 1)
+theme_override_colors/font_pressed_color = Color(0.415686, 0.603922, 0.109804, 1)
+theme_override_colors/font_hover_color = Color(0.901961, 0.568627, 0.0509804, 1)
+theme_override_colors/font_disabled_color = Color(0.894118, 0.741176, 0.137255, 1)
+theme_override_fonts/font = SubResource("2")
+text = "Play !"
+flat = true
+script = ExtResource("2")
+
+[node name="ButtonExitGame" type="Button" parent="."]
+layout_mode = 0
+offset_left = 382.85
+offset_top = 419.9
+offset_right = 597.85
+offset_bottom = 483.9
+rotation = -5.6
+theme_override_colors/font_color = Color(0.894118, 0.741176, 0.137255, 1)
+theme_override_colors/font_pressed_color = Color(0.847059, 0.129412, 0.0941176, 1)
+theme_override_colors/font_hover_color = Color(0.901961, 0.568627, 0.0509804, 1)
+theme_override_colors/font_disabled_color = Color(0.894118, 0.741176, 0.137255, 1)
+theme_override_fonts/font = SubResource("3")
+text = "Exit Game"
+flat = true
+script = ExtResource("1")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 812.019
+offset_top = 545.139
+offset_right = 1002.02
+offset_bottom = 575.139
+theme_override_colors/font_color = Color(0.901961, 0.568627, 0.0509804, 1)
+theme_override_fonts/font = SubResource("4")
+text = "Made by KeigA_at"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 555.0
+offset_right = 213.0
+offset_bottom = 585.0
+theme_override_colors/font_color = Color(0.25098, 0.901961, 0.0509804, 1)
+theme_override_fonts/font = SubResource("4")
+text = "Ze Kugel v.1.1"
+
+[connection signal="pressed" from="ButtonPlay" to="ButtonPlay" method="_on_Buttontitleplay_pressed"]
+[connection signal="pressed" from="ButtonExitGame" to="ButtonExitGame" method="_on_ButtonExitGame_pressed"]
